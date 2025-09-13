@@ -1,0 +1,140 @@
+export component Landing() {
+	<div class='landing nyao'>
+		<section class='hero'>
+			<div class='avatar'>{'😺'}</div>
+			<h1 class='brand'>{'Nyaomaru'}</h1>
+			<p class='tagline'>{'Create, play, and polish — with Ripple.'}</p>
+			<div class='cta'>
+				<a class='btn primary' href='https://www.ripplejs.com/' target='_blank' rel='noreferrer'>{'Ripple Website'}</a>
+				<a class='btn ghost' href='https://github.com/trueadm/ripple' target='_blank' rel='noreferrer'>{'GitHub'}</a>
+			</div>
+		</section>
+
+		<section class='features'>
+			<div class='card'>
+				<div class='icon'>{'⚡'}</div>
+				<h3>{'Fast'}</h3>
+				<p>{'Fine-grained updates without a VDOM.'}</p>
+			</div>
+			<div class='card'>
+				<div class='icon'>{'🎯'}</div>
+				<h3>{'Intuitive'}</h3>
+				<p>{'Small API, natural components.'}</p>
+			</div>
+			<div class='card'>
+				<div class='icon'>{'🧪'}</div>
+				<h3>{'Type-safe'}</h3>
+				<p>{'Refactoring with confidence, powered by types.'}</p>
+			</div>
+		</section>
+	</div>
+
+	<style>
+	  .landing.nyao {
+			min-height: calc(100vh - 56px);
+			background: radial-gradient(1200px 600px at 10% -10%, rgba(143, 139, 255, 0.25), transparent 60%),
+        radial-gradient(1000px 500px at 100% 10%, rgba(69, 211, 255, 0.18), transparent 60%),
+        linear-gradient(180deg, #0b0d12 0%, #0f1220 100%);
+			color: #eef2ff;
+			padding: 40px 16px;
+			font-family: "Arial", sans-serif;
+		}
+		  .hero {
+			max-width: 960px;
+			margin: 0 auto 28px auto;
+			text-align: center;
+		}
+		  .avatar {
+			width: 84px;
+			height: 84px;
+			margin: 0 auto 12px auto;
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			font-size: 40px;
+			background: linear-gradient(135deg, #ff8bd0, #8f8bff);
+			box-shadow: 0 10px 30px rgba(143, 139, 255, 0.25);
+		}
+		  .brand {
+			margin: 0;
+			font-size: 44px;
+			letter-spacing: 0.5px;
+			background: linear-gradient(90deg, #ff8bd0, #45d3ff);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		  .tagline {
+			margin: 6px 0 12px 0;
+			color: #c7cbe6;
+			font-size: 16px;
+		}
+		  .cta {
+			display: inline-flex;
+			gap: 10px;
+			margin-top: 6px;
+		}
+		  .btn {
+			display: inline-block;
+			padding: 10px 16px;
+			border-radius: 999px;
+			text-decoration: none;
+			font-weight: 600;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			background: rgba(255, 255, 255, 0.06);
+			color: #eef2ff;
+			backdrop-filter: blur(6px);
+			transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+		}
+		  .btn/* Unknown: PseudoClassSelector */ {
+			transform: translateY(-1px);
+		}
+		  .btn.primary {
+			background: linear-gradient(90deg, #8f8bff, #ff8bd0);
+			border-color: transparent;
+		}
+		  .btn.ghost {
+			background: transparent;
+		}
+		  .features {
+			max-width: 960px;
+			margin: 24px auto 0 auto;
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 14px;
+		}
+		  .card {
+			background: rgba(255, 255, 255, 0.06);
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			border-radius: 14px;
+			padding: 16px;
+			text-align: left;
+			box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+			transition: transform 140ms ease, border-color 140ms ease;
+		}
+		  .card/* Unknown: PseudoClassSelector */ {
+			transform: translateY(-2px);
+			border-color: rgba(255, 255, 255, 0.22);
+		}
+		  .icon {
+			font-size: 20px;
+		}
+		  .cardh3 {
+			margin: 8px 0 4px 0;
+			font-size: 18px;
+		}
+		  .cardp {
+			color: #c7cbe6;
+			margin: 0;
+			font-size: 14px;
+		}
+		  .features {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+		  @supports (font-size: clamp(1rem, 1vw, 2rem)) {
+			.brand {
+				font-size: clamp(32px, 6vw, 44px);
+			}
+		}
+	</style>
+}

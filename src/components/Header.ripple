@@ -1,0 +1,53 @@
+export component Header(props) {
+	<header class='topbar'><nav>
+		<a class='brand-mark' href='https://github.com/nyaomaru' target='_blank' rel='noreferrer'>{'😺 Nyaomaru'}</a>
+		<button class='link' aria-current={props.page === 'landing' ? 'page' : undefined} onPointerDown={e => {
+				props.onNavigate('landing');
+			}}>{'Landing'}</button>
+
+		<button class='link' aria-current={props.page === 'counter' ? 'page' : undefined} onPointerDown={e => {
+				props.onNavigate('counter');
+			}}>{'Counter'}</button>
+	</nav></header>
+
+	<style>
+	  .topbar {
+			display: flex;
+			align-items: center;
+			padding: 10px 12px;
+			border-bottom: 1px solid rgba(255,255,255,0.12);
+			font-family: "Arial", sans-serif;
+			background: #000;
+			color: #fff;
+		}
+		  nav {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+		  .brand-mark {
+			font-weight: 700;
+			margin-right: 8px;
+			color: #fff;
+			text-decoration: none;
+		}
+		  .link {
+			padding: 6px 10px;
+			background: transparent;
+			border: 1px solid rgba(255,255,255,0.16);
+			border-radius: 999px;
+			cursor: pointer;
+			font-family: "Courier New", monospace;
+			color: #e8e8e8;
+			transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+		}
+		  .link {
+			background: rgba(255,255,255,0.08);
+		}
+		  .link.active {
+			border-color: #8f8bff;
+			color: #cfcaff;
+			background: rgba(143, 139, 255, 0.12);
+		}
+	</style>
+}

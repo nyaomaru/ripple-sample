@@ -1,0 +1,15 @@
+[tools]
+node = "22"
+pnpm = "10.12"
+
+[tasks.dev]
+run = "pnpm dev"
+
+[tasks.build]
+run = "pnpm build"
+
+[tasks.format]
+run = "pnpm format"
+
+[tasks.format_check]
+run = "pnpm run format:check"
