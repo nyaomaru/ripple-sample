@@ -2,20 +2,14 @@
 node = "22"
 pnpm = "10.12"
 
-[tasks.lint]
-run = "pnpm lint"
+[tasks.dev]
+run = "pnpm dev"
 
 [tasks.build]
 run = "pnpm build"
 
-[tasks.test]
-run = "pnpm test"
+[tasks.format]
+run = "pnpm format"
 
-[tasks.test_unit]
-run = "pnpm run test:unit"
-
-[tasks.test_performance]
-run = "pnpm run test:performance"
-
-[tasks.qa]
-run = ["pnpm lint", "pnpm test", "pnpm build"]
+[tasks.format_check]
+run = "pnpm run format:check"
